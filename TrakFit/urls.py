@@ -23,5 +23,9 @@ urlpatterns = [
     path('', views.login, name='login'),
     path('logout/', views.logout, name='logout'),
     path('register/', views.register, name='register'),
-    path('reset-password/', views.resetPassword, name='resetPassword'),
+    path('reset-password/', views.reset_password, name='reset-password'),
+    path('student-dashboard/', views.student_dashboard, name='student-dashboard'),
+    path('student-profile/view', views.student_profile, name='student-profile'),
+    path('student-profile/update/', views.student_profile_update, name='student-profile-update'),
+    path('student-settings/', views.student_settings, name='student-settings'),
 ]

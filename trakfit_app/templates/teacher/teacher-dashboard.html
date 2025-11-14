@@ -794,6 +794,38 @@
         margin-top: 1px;
       }
 
+      /* Responsive Typography */
+      .page-title {
+        font-size: clamp(1.8rem, 5vw, 3rem);
+      }
+
+      /* Mobile phones */
+      @media (max-width: 576px) {
+        .main-content {
+          padding: 1rem;
+        }
+
+        .stats-grid {
+          grid-template-columns: 1fr 1fr;
+          gap: 0.75rem;
+        }
+
+        .stat-card {
+          padding: 1rem;
+        }
+
+        .user-avatar {
+          width: 45px;
+          height: 45px;
+        }
+
+        .notification-icon {
+          width: 35px;
+          height: 35px;
+        }
+      }
+
+      /* Tablets */
       @media (max-width: 768px) {
         .dashboard-container {
           flex-direction: column;
@@ -810,6 +842,19 @@
 
         .content-grid {
           grid-template-columns: 1fr;
+        }
+
+        .filter-section {
+          flex-wrap: wrap;
+          gap: 0.75rem;
+        }
+      }
+
+      /* Large screens */
+      @media (min-width: 1200px) {
+        .main-content {
+          max-width: 1400px;
+          margin-right: auto;
         }
       }
     </style>

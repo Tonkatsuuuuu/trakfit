@@ -364,6 +364,52 @@
             text-align: center;
         }
 
+        /* Responsive Typography */
+        .page-title {
+            font-size: clamp(1.8rem, 5vw, 3rem);
+        }
+
+        .student-name {
+            font-size: clamp(1.2rem, 3vw, 1.6rem);
+        }
+
+        /* Mobile phones */
+        @media (max-width: 576px) {
+            .main-content {
+                padding: 1rem;
+            }
+
+            .fitness-table-container {
+                overflow-x: auto;
+                -webkit-overflow-scrolling: touch;
+            }
+
+            .fitness-table {
+                min-width: 600px;
+                font-size: 0.85rem;
+            }
+
+            .chart-grid {
+                flex-direction: column;
+                gap: 1rem;
+            }
+
+            .chart-card {
+                max-width: 100%;
+            }
+
+            .user-avatar {
+                width: 45px;
+                height: 45px;
+            }
+
+            .back-button {
+                width: 35px;
+                height: 35px;
+            }
+        }
+
+        /* Tablets */
         @media (max-width: 768px) {
             .sidebar {
                 transform: translateX(-100%);
@@ -381,6 +427,19 @@
             .student-info-grid {
                 grid-template-columns: 1fr;
                 gap: 1rem;
+            }
+
+            .chart-grid {
+                display: grid;
+                grid-template-columns: repeat(2, 1fr);
+            }
+        }
+
+        /* Large screens */
+        @media (min-width: 1200px) {
+            .main-content {
+                max-width: 1400px;
+                margin-right: auto;
             }
         }
     </style>

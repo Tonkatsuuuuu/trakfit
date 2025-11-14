@@ -336,6 +336,43 @@
             margin-bottom: 2px;
         }
 
+        /* Responsive Typography */
+        .page-title {
+            font-size: clamp(1.8rem, 5vw, 3rem);
+        }
+
+        /* Mobile phones */
+        @media (max-width: 576px) {
+            .main-content {
+                padding: 1rem;
+            }
+
+            .student-table-container {
+                overflow-x: auto;
+                -webkit-overflow-scrolling: touch;
+            }
+
+            .student-table {
+                min-width: 600px;
+            }
+
+            .user-avatar {
+                width: 45px;
+                height: 45px;
+            }
+
+            .notification-icon {
+                width: 35px;
+                height: 35px;
+            }
+
+            .controls-row {
+                flex-direction: column;
+                gap: 1rem;
+            }
+        }
+
+        /* Tablets */
         @media (max-width: 768px) {
             .sidebar {
                 transform: translateX(-100%);
@@ -343,6 +380,14 @@
 
             .main-content {
                 margin-left: 0;
+            }
+        }
+
+        /* Large screens */
+        @media (min-width: 1200px) {
+            .main-content {
+                max-width: 1400px;
+                margin-right: auto;
             }
         }
     </style>
@@ -803,33 +848,33 @@
             });
         });
 
-        {#// Search functionality#}
-        {#document.querySelector('.search-input').addEventListener('input', function() {#}
-        {#    const searchTerm = this.value.toLowerCase();#}
-        {#    const rows = document.querySelectorAll('tbody tr');#}
-        {#    #}
-        {#    rows.forEach(row => {#}
-        {#        const studentName = row.querySelector('.student-name').textContent.toLowerCase();#}
-        {#        const studentSection = row.querySelector('.student-section').textContent.toLowerCase();#}
-        {#        const studentEmail = row.querySelector('.student-email').textContent.toLowerCase();#}
-        {#        #}
-        {#        if (studentName.includes(searchTerm) || #}
-        {#            studentSection.includes(searchTerm) || #}
-        {#            studentEmail.includes(searchTerm)) {#}
-        {#            row.style.display = '';#}
-        {#        } else {#}
-        {#            row.style.display = 'none';#}
-        {#        }#}
-        {#    });#}
-        {#});#}
+       // {#// Search functionality#}
+        // {#document.querySelector('.search-input').addEventListener('input', function() {#}
+        // {#    const searchTerm = this.value.toLowerCase();#}
+        // {#    const rows = document.querySelectorAll('tbody tr');#}
+        // {#    #}
+        // {#    rows.forEach(row => {#}
+        // {#        const studentName = row.querySelector('.student-name').textContent.toLowerCase();#}
+        // {#        const studentSection = row.querySelector('.student-section').textContent.toLowerCase();#}
+        // {#        const studentEmail = row.querySelector('.student-email').textContent.toLowerCase();#}
+        // {#        #}
+        // {#        if (studentName.includes(searchTerm) || #}
+        // {#            studentSection.includes(searchTerm) || #}
+        // {#            studentEmail.includes(searchTerm)) {#}
+        // {#            row.style.display = '';#}
+        // {#        } else {#}
+        // {#            row.style.display = 'none';#}
+        // {#        }#}
+        // {#    });#}
+        // {#});#}
 
-        {#// Student row click functionality#}
-        {#document.querySelectorAll('.student-row').forEach(row => {#}
-        {#    row.addEventListener('click', function() {#}
-        {#        const studentId = this.getAttribute('data-student-id');#}
-        {#        window.location.href = `/student-profile/${studentId}/`;#}
-        {#    });#}
-        {#});#}
+        // {#// Student row click functionality#}
+        // {#document.querySelectorAll('.student-row').forEach(row => {#}
+        // {#    row.addEventListener('click', function() {#}
+        // {#        const studentId = this.getAttribute('data-student-id');#}
+        // {#        window.location.href = `/student-profile/${studentId}/`;#}
+        // {#    });#}
+        // {#});#}
     </script>
 </body>
 </html>
